@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Bruger redigering</title>
+	<script src="jquery-3.1.1.js"></script>
+	<script src="jquery.serialize-object.js"></script>
+	<script src="useredit.js"></script>
+	<link href="main.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+	<DIV class="container">
+		<h1>Opret user</h1>
+		<form id="userform">
+			<div>
+				<label for="id">ID: </label> <input type="number"
+					id="id" name="id">
+			</div>
+			<div>
+				<label for="name">Navn: </label><input type="text"
+					id="name" name="name">
+			</div>
+			<div>
+				<label for="ini">Initialer: </label><input type="text"
+					id="ini" name="ini">
+			</div>
+			<div>
+				<label for="roles">Rolle: </label><input type="text"
+					id="roles" name="roles">
+			</div>
+			<div>
+				<label for="password">Password: </label><input type="text"
+					id="password" name="password">
+			</div>
+			<div>
+				<label for="cpr">CPR: </label><input type="text"
+					id="cpr" name="cpr">
+			</div>
+			<button onclick="createUser();">Gem ændringer</button>
+		</form>
+	</DIV>
+	<!-- Ingredients -->
+	<div class="container" id="users">
+	<h1>Bruger</h1>
+		<table>
+			<thead>
+				<tr>
+					<td>ID</td>
+					<td>Navn</td>
+					<td>Initialer</td>
+					<td>Rolle</td>
+					<td>Password</td>
+					<td>cpr</td>
+					<!-- <td>Slet ingrediens<td> -->
+				</tr>
+			</thead>
+			<tbody id="usertablebody">
+
+			</tbody>
+		</table>
+		<hr>
+		<form>
+		Slet bruger med ID:
+		<input type="number" id="deleteid">
+		<button onclick="deleteUser();">Slet bruger</button>
+		</form>
+	</div>
+
+</body>
+</html>
